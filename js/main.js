@@ -46,7 +46,7 @@ $('.left_arrow').on('click', function() {
 	$(".slider").vegas('previous');
 });
 
-// Owl Carousel
+// Owl Carousel - Gallery
 
 $(document).ready(function() {
 
@@ -65,6 +65,30 @@ $(document).ready(function() {
 		owl.trigger('owl.next');
 	});
 	$(".gallery_prev").click(function() {
+		owl.trigger('owl.prev');
+	});
+
+});
+
+// Owl Carousel - Sponsors
+
+$(document).ready(function() {
+
+	var owl = $("#sponsor_slider");
+
+	owl.owlCarousel({
+		pagination: false,
+		slideSpeed : 800,
+		items : 3,
+		itemsTablet : [1024, 2],
+		itemsTabletSmall : [640, 1],
+	});
+	
+	// Custom Navigation Events
+	$(".sponsor_next").click(function() {
+		owl.trigger('owl.next');
+	});
+	$(".sponsor_prev").click(function() {
 		owl.trigger('owl.prev');
 	});
 
