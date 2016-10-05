@@ -20,10 +20,26 @@
 		<script src="https://use.fontawesome.com/8dc51e0127.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfPsk748F6HlujQp8lJd5m7Gwrq-xsQfA&callback=initMap" async defer></script>
+		<script>
+			$(function() {
+			  $('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html, body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+		</script>
 
 
 	</head>
-	<body onload="initMap()">
+	<body onload="initMap()" id="home">
 		<div id="wrapper">
 			<div class="slider">
 				
@@ -38,7 +54,7 @@
 					  <li><a href="#overview">Overview</a></li>
 					  <li><a href="#venue">Venue</a></li>
 					  <li><a href="#gallery">Gallery</a></li>
-					  <li><a href="#contact">Contact</a></li>
+					  <li><a href="#hashtag">Hashtag</a></li>
 					</ul>
 										
 					<div class="exhibit_info">
@@ -50,9 +66,9 @@
 					</div>
 					<table class="page_links" width="133" border="1">
     					<tr>
-					        <td><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
-					        <td><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i></a></td>
-					        <td><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+					        <td><a href="#overview"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+					        <td><a href="#gallery"><i class="fa fa-picture-o" aria-hidden="true"></i></a></td>
+					        <td><a href="#venue"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
    						 </tr>
 					</table>
 				 </div> 
@@ -75,7 +91,7 @@
 			<!-- End change slide arrows -->
 			
 		<!-- Start Overview -->
-		<section class="overview">
+		<section class="overview" id="overview" data-role="page">
 			<div class="overview_container">
 			<h1 class="overview_title">Overview.</h1>
 			<p class="overview_description">
@@ -119,7 +135,7 @@
 		<!-- End Overview --> 
 		
 		<!-- Start Gallery -->
-		<section class="gallery">
+		<section class="gallery" id="gallery">
 			<div class="gallery_container">
 					<div class="gallery_navigation">
 						<div class="left_arrow_box"><p class="main_arrow"><i class="fa fa-angle-left left_arrow gallery_prev" aria-hidden="true"></i></p></div>
@@ -139,7 +155,7 @@
 		<!-- End Gallery Section -->
 		
 		<!-- Start Map Section -->
-		<section class="map">
+		<section class="map" id="venue">
 			<div id="map_container">
 				
 			</div>
@@ -197,7 +213,7 @@
 		<!-- End Sponsors Section -->
 		
 		<!-- Start Twitter Hashtag Section -->
-		<section class="hashtag_twitter">
+		<section class="hashtag_twitter" id="hashtag">
 			<div class="hashtag_container">
 				<h2 class="hashtag">#exhibitionshadows.</h2>
 				<p class="hashtag_text">
@@ -208,28 +224,27 @@
 		</section>
 		<!-- End Twitter Hashtag Section -->
 		
+		<!-- Start Footer -->
 		<footer class="main_footer">
 			<div class="footer_container">
 				<div class="logo_footer_container">
 					<div><p class="logo_footer"><span class="logo_border_footer">E</span></p></div>
 				<p class="logo_text_footer">Exhibition<br /><span class="logo_here_text_footer">Your Logo Here</span></p>
 				</div>
-				<div class="to_top_border"><i class="fa fa-angle-up angle_up" aria-hidden="true"></i></div>	
+				<div class="to_top_border"><a href="#home"><i class="fa fa-angle-up angle_up" aria-hidden="true"></i></a></div>	
 				<div></div>
 				<ul class="bottom_nav">
 					<li><a href="#overview">Overview</a></li>
 					<li><a href="#venue">Venue</a></li>
 					<li><a href="#gallery">Gallery</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#hashtag">Hashtag</a></li>
 				</ul>		
 				
 			</div>
 		</footer>
+		<!-- End Footer -->
 		
 		</div>
-		 
-		
-		
 		
 		<script type="text/javascript" src="js/vegas.js"></script>
 		<script type="text/javascript" src="js/owl.carousel.js"></script>

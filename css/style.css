@@ -51,8 +51,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 div.slider {
-	overflow: auto;
-	height: 457px;
+	/*overflow: auto;*/
+	height: 455px;
 }
 
 
@@ -157,6 +157,8 @@ span.photography_text {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	font-size: 10px;
+	display: block;
+	padding: 3px 0px;
 }
 
 h1.exhibit_title {
@@ -208,6 +210,18 @@ table.page_links a {
 	cursor: pointer;
 }
 
+table.page_links a:hover {
+	color: #000000;
+	-webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
 div.end_section {
 	background: #000;
 	width: 100%;
@@ -236,6 +250,7 @@ i.left_arrow, i.right_arrow {
 
 i.left_arrow:hover, i.right_arrow:hover{
     color: #fe4747;
+    cursor: pointer;
 }
 
 
@@ -306,7 +321,7 @@ i.left_arrow:hover, i.right_arrow:hover{
 @media only screen and (min-width: 1280px) {
 	
 	ul.topnav {
-		width: 510px;
+		width: 520px;
 		margin: 0px 0px 0px 608px;
 		
 	}
@@ -854,9 +869,16 @@ div.to_top_border {
 	margin: 28px 25px 0px 0px;
 }
 
+div.to_top_border a {
+	color: #fff;
+}
+
+div.to_top_border a:hover {
+	color: #fe4747;
+}
+
 i.angle_up {
 	margin: 0;
-	padding: auto auto;
 }
 
 
@@ -912,6 +934,23 @@ ul.bottom_nav li a:hover {
 }
 
 @media only screen and (min-width: 1366px) {
+	
+	p.logo_footer {
+		font-size: 30px;
+	}
+
+	span.logo_border_footer {
+		border: solid 3px #ffffff;
+		padding: 1px 8px;
+	}
+	
+	p.logo_text_footer {
+		font-size: 18px;
+	}
+	
+	span.logo_here_text_footer {
+		font-size: 13px;
+	}
 	
 	div.to_top_border {
 		margin: 45px 88px 0px 0px;

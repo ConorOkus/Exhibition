@@ -229,3 +229,25 @@ function initMap() {
 	map.setMapTypeId('styled_map');
 }
 
+// Page Scrolling
+// 1) Attach click event handler to all link with # in the Href
+// 2) Ensure link is pointing to the same page and same domain
+// 3) Check for hash - strip the # and check if anything is left
+// 4) If there is a target scroll to that area 
+// 5) Reference CSS tricks
+
+// $(function() {
+  // $('a[href*="#"]:not([href="#"])').click(function() {
+    // if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      // var target = $(this.hash);
+      // target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      // if (target.length) {
+        // $('html, body').animate({
+          // scrollTop: target.offset().top
+        // }, 1000);
+        // return false;
+      // }
+    // }
+  // });
+// });
+
