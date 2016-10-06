@@ -1,5 +1,5 @@
 # Single Page Exhibition Website
-![Single Page Exhibition Website]
+![Single Page Exhibition Website](desktop-mobile.png)
 This is the repository for the Exhibition website, to view the full webiste [Click Here](http://doc.gold.ac.uk/~ma301co/Exhibition/). 
 
 This site is to be used by an artist looking to promote an upcoming exhibition for their work. The design was created by Themderbolt and functions on many different devices and browsers and is fast and easy to navigate.
